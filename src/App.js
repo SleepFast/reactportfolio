@@ -10,16 +10,16 @@ function App() {
     <>
       <Navbar/>
         <Switch>
-          <Route path='/' exact>
+          <Route path='/reactportfolio' exact>
             <Profil/>
           </Route>
-          <Route path='/competences' exact>
+          <Route path='/reactportfolio/competences' exact>
             <Competences/>
           </Route>
-          <Route path='/projets' exact>
+          <Route path='/reactportfolio/projets' exact>
             <Projets/>
           </Route>
-          <Route path='/contact' exact>
+          <Route path='/reactportfolio/contact' exact>
             <Contact/>
           </Route>
         </Switch> 

@@ -9,16 +9,16 @@ function Navbar() {
       <nav className="Navbar-nav">
         <ul className="Navbar-list">
         <li className="Navbar-item">
-          <Link to='/'>Profil</Link>
+          <Link to='/reactportfolio/profil'>Profil</Link>
         </li>
         <li className="Navbar-item">
-          <Link to='/competences'>Compétences</Link>
+          <Link to='/reactportfolio/competences'>Compétences</Link>
         </li>
         <li className="Navbar-item">
-          <Link to='/projets'>Projets</Link>
+          <Link to='/reactportfolio/projets'>Projets</Link>
         </li>
         <li className="Navbar-item">
-          <Link to='/contact'>Contact</Link>
+          <Link to='/reactportfolio/contact'>Contact</Link>
         </li>
         </ul>
         <button className="Navbar-burger">
