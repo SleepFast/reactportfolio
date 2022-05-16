@@ -7,22 +7,23 @@ import Navbar from './components/Navbar'
 
 function App() {
   return (
-    <Navbar>
-      <Switch>
-        <Route path='/' exact>
-          <Profil/>
-        </Route>
-        <Route path='/competences'>
-          <Competences/>
-        </Route>
-        <Route path='/projets'>
-          <Projets/>
-        </Route>
-        <Route path='/contact'>
-          <Contact/>
-        </Route>
-      </Switch> 
-    </Navbar>
+    <>
+      <Navbar/>
+        <Switch>
+          <Route path='/' exact>
+            <Profil/>
+          </Route>
+          <Route path='/competences' exact>
+            <Competences/>
+          </Route>
+          <Route path='/projets' exact>
+            <Projets/>
+          </Route>
+          <Route path='/contact' exact>
+            <Contact/>
+          </Route>
+        </Switch> 
+    </>
   );
 }
 
