@@ -10,7 +10,7 @@ function App() {
     <>
       <Navbar/>
         <Switch>
-          <Route path='/reactportfolio' exact>
+          <Route path='/reactportfolio/profil' exact>
             <Profil/>
           </Route>
           <Route path='/reactportfolio/competences' exact>
