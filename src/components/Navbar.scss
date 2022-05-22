@@ -107,14 +107,14 @@
     }
     
     .Navbar-line:first-child {
-        top: 10px;
+        top: 8px;
         right: 0;
         transform: rotate(135deg);
         transition: top 0.5s ease-in-out, transform 0.5s ease-in-out;
     }
     
     .Navbar-line:last-child {
-        bottom: 10px;
+        bottom: 8px;
         right: 0;
         transform: rotate(-135deg);
         transition: bottom 0.5s ease-in-out, transform 0.5s ease-in-out;
