@@ -1,9 +1,21 @@
-$start-tablet: 700px;
-$start-desktop: 1030px;
-$layout-maxWidth: 1250px;
+:root {  
+    --color-mainbg: #24242B;
+
+    --color-black: #0C0C1E;
+    --color-gray: #6B2E3C;
+    
+    --color-mainDark: #74112F;
+    --color-mainLight: #F3E3E2;
+}
+
+$color-mainbg: #24242B;
 
 $color-black: #0C0C1E;
 $color-gray: #1B2E3C;
 
 $color-mainDark: #74112F;
 $color-mainLight: #F3E3E2;
+
+$start-tablet: 700px;
+$start-desktop: 1030px;
+$layout-maxWidth: 1250px;

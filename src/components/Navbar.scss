@@ -3,6 +3,7 @@
 .Navbar {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     background-color: transparent;
     margin-top: 10px;
 }
@@ -23,31 +24,100 @@
     }
 }
 
-.Navbar-item {
-    height: 100%;
-    padding: 10px 20px;
-    font-size: 1rem;
-}
-
 .Navbar-item:not(:last-child) {
     margin-right: 30px;
 }
 
 .Navbar-item:last-child {
-    background-color: $color-mainDark;
+    background-color: var(--color-mainDark);
     border-radius: 10%;
     
     &:hover {
-        color: $color-black;
+        color: var(--color-black);
         background-color: lighten($color-mainDark, 50%);
     }
 }
 
-.Navbar-burger {
-    width: 50px;
-    height: 40px;
+.Navbar-link {
+    display: block;
+    height: 100%;
+    font-size: 1rem;
+    padding: 10px 20px;
+}
 
+.Navbar-burger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--color-mainDark);
+    border-radius: 25%;
+    
     @media screen and (min-width: $start-tablet) {
         display: none;
+    }
+}
+
+.Navbar-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    height: 22px;
+    padding: 2px 0;
+}
+
+.Navbar-line {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-mainDark);
+}
+
+.Navbar-line:nth-child(1) {
+    top: 0;
+    transition: top 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.Navbar-line:nth-child(3) {
+    bottom: 0;
+    transition: bottom 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.Navbar-line:nth-child(2) {
+    width: 70%;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.Navbar-burger--shown {
+    
+    .Navbar-line {
+        position: absolute;
+    }
+    
+    .Navbar-line:nth-child(2) {
+        margin-right: 3px;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+    
+    .Navbar-line:first-child {
+        top: 10px;
+        right: 0;
+        transform: rotate(135deg);
+        transition: top 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+    
+    .Navbar-line:last-child {
+        bottom: 10px;
+        right: 0;
+        transform: rotate(-135deg);
+        transition: bottom 0.5s ease-in-out, transform 0.5s ease-in-out;
     }
 }
