@@ -5,7 +5,9 @@ function Navbar() {
 
   function displayMenu() {
     const burger = document.querySelector(".Navbar-burger")
+    const navlist = document.querySelector(".Navbar-list")
     
+    navlist.classList.toggle('Navbar-list--shown')
     burger.classList.toggle('Navbar-burger--shown')
   }
 
@@ -16,28 +18,27 @@ function Navbar() {
       </h2>
       <nav className="Navbar-nav">
         <ul className="Navbar-list">
-        <li className="Navbar-item">
-          <Link className="Navbar-link" to='/reactportfolio/profil'>Profil</Link>
-        </li>
-        <li className="Navbar-item">
-          <Link className="Navbar-link" to='/reactportfolio/competences'>Compétences</Link>
-        </li>
-        <li className="Navbar-item">
-          <Link className="Navbar-link" to='/reactportfolio/projets'>Projets</Link>
-        </li>
-        <li className="Navbar-item">
-          <Link className="Navbar-link" to='/reactportfolio/contact'>Contact</Link>
-        </li>
+          <li className="Navbar-item">
+            <Link className="Navbar-link" to='/reactportfolio/profil'>Profil</Link>
+          </li>
+          <li className="Navbar-item">
+            <Link className="Navbar-link" to='/reactportfolio/competences'>Compétences</Link>
+          </li>
+          <li className="Navbar-item">
+            <Link className="Navbar-link" to='/reactportfolio/projets'>Projets</Link>
+          </li>
+          <li className="Navbar-item">
+            <Link className="Navbar-link" to='/reactportfolio/contact'>Contact</Link>
+          </li>
         </ul>
-        <button className="Navbar-burger" onClick={displayMenu}>
+      </nav>
+      <button className="Navbar-burger" onClick={displayMenu}>
         <div className="Navbar-content">
-
           <span className="Navbar-line"></span>
           <span className="Navbar-line"></span>
           <span className="Navbar-line"></span>
         </div>
-        </button>
-      </nav>
+      </button>
     </header>
   );
 }

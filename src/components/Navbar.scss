@@ -12,11 +12,22 @@
     margin-top: auto;
     margin-bottom: auto;
     text-transform: uppercase;
+    z-index: 10;
 } 
 
 .Navbar-list {
-    display: none;
-
+    
+    @media screen and (max-width: $start-tablet) {
+        position: absolute;
+        top: 0;
+        right: 100%;
+        left: -100%;
+        bottom: 0;
+        z-index: 1;
+        background-color: var(--color-black);  
+        transition: right 0.3s ease-in-out, left 0.3s ease-in-out;
+    }
+    
     @media screen and (min-width: $start-tablet) {
         display: flex;
         align-items: center;
@@ -24,8 +35,21 @@
     }
 }
 
+.Navbar-item:first-child {
+    @media screen and (max-width: $start-tablet) {
+        margin-top: 50%;
+    }
+}
+
 .Navbar-item:not(:last-child) {
-    margin-right: 30px;
+    
+    @media screen and (max-width: $start-tablet) {
+        margin-bottom: 5%;
+    }
+    
+    @media screen and (min-width: $start-tablet) {
+        margin-right: 30px;
+    }
 }
 
 .Navbar-item:last-child {
@@ -35,6 +59,12 @@
     &:hover {
         color: var(--color-black);
         background-color: lighten($color-mainDark, 50%);
+    }
+
+    @media screen and (max-width: $start-tablet) {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -52,7 +82,8 @@
     width: 40px;
     height: 40px;
     border: 3px solid var(--color-mainDark);
-    border-radius: 25%;
+    border-radius: 20%;
+    z-index: 10;
     
     @media screen and (min-width: $start-tablet) {
         display: none;
@@ -66,6 +97,7 @@
     justify-content: space-between;
     width: 16px;
     height: 18px;
+    z-index: 10;
 }
 
 .Navbar-line {
@@ -75,14 +107,9 @@
     background-color: var(--color-mainDark);
 }
 
-.Navbar-line:nth-child(1) {
+.Navbar-line:first-child {
     top: 0;
     transition: top 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-
-.Navbar-line:nth-child(3) {
-    bottom: 0;
-    transition: bottom 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .Navbar-line:nth-child(2) {
@@ -91,10 +118,22 @@
     transition: opacity 0.2s ease-in-out;
 }
 
+.Navbar-line:last-child {
+    bottom: 0;
+    transition: bottom 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
 .Navbar-burger--shown {
     
     .Navbar-line {
         position: absolute;
+    }
+    
+    .Navbar-line:first-child {
+        top: 8px;
+        right: 0;
+        transform: rotate(135deg);
+        transition: top 0.5s ease-in-out, transform 0.5s ease-in-out;
     }
     
     .Navbar-line:nth-child(2) {
@@ -106,17 +145,21 @@
         transition: opacity 0.3s ease-in-out;
     }
     
-    .Navbar-line:first-child {
-        top: 8px;
-        right: 0;
-        transform: rotate(135deg);
-        transition: top 0.5s ease-in-out, transform 0.5s ease-in-out;
-    }
-    
     .Navbar-line:last-child {
         bottom: 8px;
         right: 0;
         transform: rotate(-135deg);
         transition: bottom 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+}
+
+.Navbar-list.Navbar-list--shown {  
+
+    @media screen and (max-width: $start-tablet) {
+        opacity: 1;
+        display: block;
+        right: 0;
+        left: 0;
+        transition: right 0.3s ease-in-out, left 0.3s ease-in-out;
     }
 }
