@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import "./Navbar.scss";
 
 function Navbar() {
-
+  
   function displayMenu() {
     const burger = document.querySelector(".Navbar-burger")
     const navlist = document.querySelector(".Navbar-list")
@@ -10,11 +10,21 @@ function Navbar() {
     navlist.classList.toggle('Navbar-list--shown')
     burger.classList.toggle('Navbar-burger--shown')
   }
+  
+  function HideMenu() {
+    const burger = document.querySelector(".Navbar-burger")
+    const navlist = document.querySelector(".Navbar-list")
+    
+    if (navlist.classList.contains('Navbar-list--shown')) {
+      navlist.classList.remove('Navbar-list--shown')
+      burger.classList.remove('Navbar-burger--shown')
+    }
+  }
 
   return (
     <header className="Navbar">
       <h2 className="Navbar-title">
-        <Link onClick={displayMenu} to='/reactportfolio'>Portfolio</Link>
+        <Link onClick={HideMenu} to='/reactportfolio'>Portfolio</Link>
       </h2>
       <nav className="Navbar-nav">
         <ul className="Navbar-list">
