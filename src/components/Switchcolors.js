@@ -20,9 +20,9 @@ function Switchcolors() {
 
     if (isDark) {
       root.style.setProperty("--color-mainbg", "#F3E3E2");
-      root.style.setProperty("--color-black", "#74112F");
-      root.style.setProperty("--color-gray", "#24242B");
-      root.style.setProperty("--color-mainDark", "#6B2E3C");
+      root.style.setProperty("--color-black", "#ad9595");
+      root.style.setProperty("--color-gray", "#6B2E3C");
+      root.style.setProperty("--color-mainDark", "#74112F");
       root.style.setProperty("--color-mainLight", "#0C0C1E");
       
       isDark = false

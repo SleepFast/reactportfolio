@@ -19,16 +19,16 @@ function Navbar() {
       <nav className="Navbar-nav">
         <ul className="Navbar-list">
           <li className="Navbar-item">
-            <Link className="Navbar-link" to='/reactportfolio/profil'>Profil</Link>
+            <Link className="Navbar-link" onClick={displayMenu} to='/reactportfolio/profil'>Profil</Link>
           </li>
           <li className="Navbar-item">
-            <Link className="Navbar-link" to='/reactportfolio/competences'>Compétences</Link>
+            <Link className="Navbar-link" onClick={displayMenu} to='/reactportfolio/competences'>Compétences</Link>
           </li>
           <li className="Navbar-item">
-            <Link className="Navbar-link" to='/reactportfolio/projets'>Projets</Link>
+            <Link className="Navbar-link" onClick={displayMenu} to='/reactportfolio/projets'>Projets</Link>
           </li>
           <li className="Navbar-item">
-            <Link className="Navbar-link" to='/reactportfolio/contact'>Contact</Link>
+            <Link className="Navbar-link" onClick={displayMenu} to='/reactportfolio/contact'>Contact</Link>
           </li>
         </ul>
       </nav>
