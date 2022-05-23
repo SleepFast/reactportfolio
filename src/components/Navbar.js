@@ -14,7 +14,7 @@ function Navbar() {
   return (
     <header className="Navbar">
       <h2 className="Navbar-title">
-        <Link to='/reactportfolio' >Portfolio</Link>
+        <Link onClick={displayMenu} to='/reactportfolio'>Portfolio</Link>
       </h2>
       <nav className="Navbar-nav">
         <ul className="Navbar-list">
