@@ -3,8 +3,8 @@ import Competences from './pages/Competences';
 import Contact from './pages/Contact';
 import Profil from './pages/Profil';
 import Projets from './pages/Projets';
-import Navbar from './components/Navbar'
-import Switchcolors from './components/Switchcolors';
+import Navbar from './components/Navbar/Navbar'
+import Switchcolors from './components/Switchcolors/Switchcolors';
 
 function App() {
   return (

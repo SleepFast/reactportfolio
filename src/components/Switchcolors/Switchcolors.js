@@ -1,5 +1,4 @@
 import "./Switchcolors.scss";
-import "../variable.scss";
 
 function Switchcolors() {
   
