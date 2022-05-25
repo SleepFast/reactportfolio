@@ -49,20 +49,31 @@
             border-radius: 10%;
             transition: right 0.4s ease-in-out, width 0.4s ease-in-out;
         }
-
+        
         &1::after {
+            right: 444px !important;
+            width: 100px !important;
+        }
+        &--active1::after {
             right: 444px;
         }
         &2::after {
+            right: 276px !important;
+            width: 140px !important            
+        }
+        &--active2::after {
             right: 276px;
             width: 140px;
         }
         &3::after {
+            right: 146px !important;
+            width: 100px !important;
+        }
+        &--active3::after {
             right: 146px;
         }
     }
 }
-
 
 .Navbar-list.Navbar-list--shown {  
     

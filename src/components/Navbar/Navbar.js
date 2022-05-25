@@ -3,12 +3,35 @@ import "./Navbar.scss";
 
 function Navbar() {
   
-  function displayMenu() {
+  function displayMenu(event) {
     const burger = document.querySelector(".Navbar-burger")
     const navlist = document.querySelector(".Navbar-list")
-    
+    const item = {
+      one : document.querySelector('[data-nav1]'), 
+      two : document.querySelector('[data-nav2]'),
+      tree : document.querySelector('[data-nav3]')
+    }
+
     navlist.classList.toggle('Navbar-list--shown')
     burger.classList.toggle('Navbar-burger--shown')
+
+    if (event.target === item.one) {
+      navlist.classList.add('Navbar-list--active1')
+      navlist.classList.remove('Navbar-list--active2')
+      navlist.classList.remove('Navbar-list--active3')
+    }
+
+    if (event.target === item.two) {
+      navlist.classList.add('Navbar-list--active2')
+      navlist.classList.remove('Navbar-list--active1')
+      navlist.classList.remove('Navbar-list--active3')
+    }
+
+    if (event.target === item.tree) {
+      navlist.classList.add('Navbar-list--active3')
+      navlist.classList.remove('Navbar-list--active2')
+      navlist.classList.remove('Navbar-list--active1')
+    }
   }
   
   function HideMenu() {
@@ -19,6 +42,10 @@ function Navbar() {
       navlist.classList.remove('Navbar-list--shown')
       burger.classList.remove('Navbar-burger--shown')
     }
+
+    navlist.classList.remove('Navbar-list--active1')
+    navlist.classList.remove('Navbar-list--active2')
+    navlist.classList.remove('Navbar-list--active3')
   }
 
   
