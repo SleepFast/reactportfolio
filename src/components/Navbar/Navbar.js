@@ -108,7 +108,7 @@ function Navbar() {
             <Link className="Navbar-link" data-nav3 onMouseLeave={animeNavRemove} onClick={displayMenu} to='/reactportfolio/projets'>Projets</Link>
           </li>
           <li className="Navbar-item">
-            <Link className="Navbar-link" onClick={displayMenu} to='/reactportfolio/contact'>Contact</Link>
+            <Link className="Navbar-link" onClick={(event) => [displayMenu(event), HideMenu()]} to='/reactportfolio/contact'>Contact</Link>
           </li>
         </ul>
       </nav>
