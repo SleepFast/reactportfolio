@@ -21,21 +21,64 @@ function Navbar() {
     }
   }
 
+  
+  function animeNav(event) {
+    const navlist = document.querySelector(".Navbar-list")
+    const item = {
+      one : document.querySelector('[data-nav1]'), 
+      two : document.querySelector('[data-nav2]'),
+      tree : document.querySelector('[data-nav3]')
+    }
+
+    if (event.target === item.one) {
+      navlist.classList.add('Navbar-list1')
+    }
+
+    if (event.target === item.two) {
+      navlist.classList.add('Navbar-list2')
+    }
+
+    if (event.target === item.tree) {
+      navlist.classList.add('Navbar-list3')
+    }
+  }
+
+  function animeNavRemove(event) {
+    const navlist = document.querySelector(".Navbar-list")
+    const item = {
+      one : document.querySelector('[data-nav1]'), 
+      two : document.querySelector('[data-nav2]'),
+      tree : document.querySelector('[data-nav3]')
+    }
+
+    if (event.target === item.one) {
+      navlist.classList.remove('Navbar-list1')
+    }
+
+    if (event.target === item.two) {
+      navlist.classList.remove('Navbar-list2')
+    }
+
+    if (event.target === item.tree) {
+      navlist.classList.remove('Navbar-list3')
+    }
+  }
+
   return (
     <header className="Navbar">
       <h2 className="Navbar-title">
         <Link onClick={HideMenu} to='/reactportfolio'>Portfolio</Link>
       </h2>
       <nav className="Navbar-nav">
-        <ul className="Navbar-list">
+        <ul className="Navbar-list" onMouseOver={animeNav}>
           <li className="Navbar-item">
-            <Link className="Navbar-link" onClick={displayMenu} to='/reactportfolio/profil'>Profil</Link>
+            <Link className="Navbar-link" data-nav1 onMouseLeave={animeNavRemove} onClick={displayMenu} to='/reactportfolio/profil'>Profil</Link>
           </li>
           <li className="Navbar-item">
-            <Link className="Navbar-link" onClick={displayMenu} to='/reactportfolio/competences'>Compétences</Link>
+            <Link className="Navbar-link" data-nav2 onMouseLeave={animeNavRemove} onClick={displayMenu} to='/reactportfolio/competences'>Compétences</Link>
           </li>
           <li className="Navbar-item">
-            <Link className="Navbar-link" onClick={displayMenu} to='/reactportfolio/projets'>Projets</Link>
+            <Link className="Navbar-link" data-nav3 onMouseLeave={animeNavRemove} onClick={displayMenu} to='/reactportfolio/projets'>Projets</Link>
           </li>
           <li className="Navbar-item">
             <Link className="Navbar-link" onClick={displayMenu} to='/reactportfolio/contact'>Contact</Link>

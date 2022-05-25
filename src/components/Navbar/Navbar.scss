@@ -32,11 +32,37 @@
     }
     
     @media screen and (min-width: $start-tablet) {
+        position: relative;
         display: flex;
         align-items: center;
         height: 100%;
+
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            right: 32px;
+            bottom: 5px;
+            width: 100px;
+            height: 5px;
+            background-color: var(--color-mainDark);
+            border-radius: 10%;
+            transition: right 0.4s ease-in-out, width 0.4s ease-in-out;
+        }
+
+        &1::after {
+            right: 444px;
+        }
+        &2::after {
+            right: 276px;
+            width: 140px;
+        }
+        &3::after {
+            right: 146px;
+        }
     }
 }
+
 
 .Navbar-list.Navbar-list--shown {  
     
@@ -46,6 +72,12 @@
         right: 0;
         left: 0;
         transition: right 0.3s ease-in-out, left 0.3s ease-in-out;
+    }
+}
+
+.Navbar-item {
+    @media screen and (min-width: $start-tablet) {
+
     }
 }
 
@@ -61,9 +93,6 @@
         margin-bottom: 5%;
     }
     
-    @media screen and (min-width: $start-tablet) {
-        margin-right: 30px;
-    }
 }
 
 .Navbar-item:last-child {
@@ -73,6 +102,7 @@
     &:hover {
         color: var(--color-black);
         background-color: lighten($color-mainDark, 50%);
+        z-index: 10;
     }
 
     @media screen and (max-width: $start-tablet) {
@@ -87,6 +117,10 @@
     height: 100%;
     font-size: 1rem;
     padding: 10px 20px;
+    
+    @media screen and (min-width: $start-tablet) {
+        padding: 10px 35px;
+    }
 }
 
 .Navbar-burger {
