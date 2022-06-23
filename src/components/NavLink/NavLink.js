@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import "./Navbar.scss"
+import "./NavLink.scss"
 
 export const NavLink = ({url, name, setState, state, classSelected, classHovered}) => {
     const {selected} = state
@@ -27,8 +27,8 @@ export const NavLink = ({url, name, setState, state, classSelected, classHovered
     }
 
     return (
-      <li className="Navbar-item">
-        <Link className="Navbar-link" data-nav={name} onMouseLeave={handleOnMouseLeave} onMouseOver={handleOnMouseOver} onClick={handleClick} to={url} selected={selected === name}>{name}</Link>
+      <li className="NavLink">
+        <Link className="NavLink-link" data-nav={name} onMouseLeave={handleOnMouseLeave} onMouseOver={handleOnMouseOver} onClick={handleClick} to={url} selected={selected === name}>{name}</Link>
       </li>
     )
   }

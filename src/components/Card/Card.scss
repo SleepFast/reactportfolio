@@ -1,0 +1,48 @@
+/*! Card component */ 
+
+@import "../../index.scss";
+
+.Card {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 20px 0;
+    padding: 20px;
+    background: rgba($color-gray--second, 0.5);
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.75), inset 0px 4px 20px 0px rgba($color-mainLight, 0.78);
+}
+
+.Card-container {
+    flex: 1;
+}
+
+.Card-img {
+    object-fit: contain;
+}
+
+.Card-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-left: 20px;
+}
+
+.Card-title {
+    margin-top: 15px;
+    text-align: center;
+    color: var(--color-mainDark);
+    font-weight: bold;
+}
+
+.Card-description {
+    margin-top: 15px;
+}
+
+.Card-footer {
+    margin-top: auto;
+    text-align: center;
+}
+
+.Card-link {
+}

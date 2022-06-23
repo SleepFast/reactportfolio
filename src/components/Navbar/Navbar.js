@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { NavLink } from './NavLink';
+import { NavLink } from '../NavLink/NavLink';
 import "./Navbar.scss";
 
 const links = [

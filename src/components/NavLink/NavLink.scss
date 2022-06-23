@@ -1,0 +1,51 @@
+/*! Navbar component */ 
+
+@import "../../index.scss";
+
+.NavLink {
+    @media screen and (min-width: $start-tablet) {
+
+    }
+}
+
+.NavLink:first-child {
+    @media screen and (max-width: $start-tablet) {
+        margin-top: 50%;
+    }
+}
+
+.NavLink:not(:last-child) {
+    
+    @media screen and (max-width: $start-tablet) {
+        margin-bottom: 5%;
+    }
+    
+}
+
+.NavLink:last-child {
+    background-color: var(--color-mainDark);
+    border-radius: 10%;
+    
+    &:hover {
+        color: var(--color-black);
+        background-color: lighten($color-mainDark, 50%);
+        z-index: 10;
+    }
+
+    @media screen and (max-width: $start-tablet) {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.NavLink-link {
+    display: block;
+    height: 100%;
+    font-size: 1rem;
+    padding: 10px 20px;
+    
+    @media screen and (min-width: $start-tablet) {
+        padding: 10px 35px;
+    }
+}
